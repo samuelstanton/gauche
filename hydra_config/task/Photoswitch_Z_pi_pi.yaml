@@ -1,0 +1,7 @@
+name: Photoswitch_Z_pi_pi
+df_path: property_prediction/photoswitches.csv
+input_col: SMILES
+label_cols:
+  - "Z isomer pi-pi* wavelength in nm"
+max_len: 512
+obj_dim: 1

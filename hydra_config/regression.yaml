@@ -1,0 +1,28 @@
+defaults:
+  - encoder: mlm_cnn
+  - surrogate: single_task_exact_gp
+  - task: Photoswitch_E_pi_pi
+  - tokenizer: selfies
+  - _self_
+
+ckpt_name: mol_model_v0.0.1
+ckpt_file: ${ckpt_name}.pt
+ckpt_cfg: ${ckpt_name}.yaml
+use_ckpt: false
+
+dtype: float
+seed: 0
+trial_id: ${seed}
+project_name: gauche
+
+# Directories for loading and storing data
+data_dir: ./data
+exp_name: test_mol_prop
+job_name: null
+timestamp: ${now:%Y-%m-%d_%H-%M-%S}
+log_dir: ${data_dir}/${exp_name}/${job_name}/${timestamp}
+wandb_mode: online
+
+logger:
+  _target_: upcycle.logging.DataFrameLogger
+  log_dir: ${log_dir}

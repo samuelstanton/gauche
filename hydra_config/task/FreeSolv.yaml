@@ -1,0 +1,7 @@
+name: FreeSolv
+df_path: property_prediction/FreeSolv.csv
+input_col: smiles
+label_cols:
+  - expt
+max_len: 512
+obj_dim: 1

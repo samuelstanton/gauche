@@ -1,0 +1,3 @@
+_target_: lambo.tasks.chem.utils.SELFIESTokenizer
+dir_path: ${data_dir}
+selfies_vocab: tmp_vocab.txt
